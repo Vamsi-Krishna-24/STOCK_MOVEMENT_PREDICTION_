@@ -10,6 +10,19 @@ Let's try to understand our complicated, complex, sophisticated project in the s
 <img src="https://www.nirmalbang.com/app_themes/images/KCbanners/img_20190827_0352_nse-india-reverse.jpg" alt="NSE Trading Floor" width="1000">
 
 <!-- 🚀 Section 1: Introduction/Brief about the Project -->
+
+<h2>Python Requirements🐍</h2> 
+<pre>
+<code> 
+import yfinance as yf
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import precision_score
+import streamlit as st
+import pickle
+import matplotlib
+   </code>
+   </pre>
 <h2>🌐 1. Introduction: Unveiling Stock Predictions</h2>
 <p>The Basic essence of the project is simple, Just a web-application that when given required input predicts and gives the output, which is the signal to BUY or SELL  .</p>
 <p>Saving money represents the past tense, while investing denotes the present tense. Stock markets have been a reliable option for decades, consistently yielding returns when approached systematically. These markets generate substantial data daily. Within this data and chaos, identifying the right moment using machine learning techniques is the fundamental principle of this project.</p>
@@ -85,7 +98,7 @@ The rest of the code is here : [Dockerfile](https://github.com/Vamsi-Krishna-24/
 
    <img src="https://imgur.com/S3aw0vp.jpg"  width="1000"/>
 # Modernized ML Deployment Journey
-
+   
 **1. ML Code Development:**
    - Kick off the journey by crafting intelligent machine-learning code using the powerful Random Forest Classifier.
 <pre>
@@ -153,4 +166,11 @@ streamlit run app.py
     </td>
   </tr>
 </table>
+
+<h2>References📕</h2>
+     - Docker in EC2: https://youtu.be/qNIniDftAcU?si=xUYauGsNTVC0UCcp
+     - Docker by Krish Naik : https://youtu.be/8vmKtS8W7IQ?si=8xfD6GviDPYTfL8W
+     - Articles: https://medium.com/appgambit/part-1-running-docker-on-aws-ec2-cbcf0ec7c3f8
+
+
 
