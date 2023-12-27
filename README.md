@@ -75,31 +75,51 @@ COPY . /app
 ...
 </code>
 </pre>
-The rest of the code is here :[Dockerfile]
+
+The rest of the code is here : [Dockerfile](https://github.com/Vamsi-Krishna-24/STOCK_MOVEMENT_PREDICTION_/blob/main/Dockerfile).
 <!-- ☁️ Section 5: EC2 Instances in the Digital Clouds -->
 <h3>☁️ EC2 Instances: Virtual Helpers in the Clouds: </h3>
 <p>In the digital clouds, Amazon EC2 instances are our virtual helpers. They provide a space for our prediction tool to run smoothly. These instances act like virtual servers, making our stock predictions accessible without worrying about physical limitations.</p>
 
 <h2>3.The PROCESS: what happened and how has that happened? </h2>
+
+   <img src="https://imgur.com/S3aw0vp.jpg"  width="1000"/>
 # Modernized ML Deployment Journey
 
 **1. ML Code Development:**
-   - Kick off the journey by crafting intelligent machine learning code using the powerful Random Forest Classifier.
+   - Kick off the journey by crafting intelligent machine-learning code using the powerful Random Forest Classifier.
 <pre>
 <code> 
 # Creating RandomForestClassifier model
 model = RandomForestClassifier(n_estimators=200, min_samples_split=100, random_state=1)
 </code>
 </pre>
+**This means that there are 200 analysts and each analyst filters the data with 100 operations, before coming to a decision**
+
+The whole [ML code](https://github.com/Vamsi-Krishna-24/STOCK_MOVEMENT_PREDICTION_/blob/main/ML_Algo/Organised_RFC.ipynb) can be accessed here.
 
 **2. Pickle Packaging:**
    - Bundle up the brilliance! Pack the ML code into a sleek "pickle," a binary storage box that holds the essence of your algorithm.
+     <pre>
+     <code> 
+     import pickle
+     # Save the trained model to a file using pickle
+     with open('random_forest_model.pkl', 'wb') as model_file:
+     pickle.dump(model, model_file)
+
+   </code>
+   </pre>
 
 **3. Streamlit for the Wow Factor:**
    - Inject life into your creation! Load the pickled ML code into a dynamic Python script using Streamlit—a magic wand for creating stunning frontends and user interfaces.
 
 **4. Streamlit Application Check:**
    - Give it a spin! Test the waters with the `streamlit app.py` command, ensuring your Streamlit application dances flawlessly. (Remember, "app.py" is the script's spotlight name.)
+ <pre>
+<code> 
+streamlit run app.py
+</code>
+</pre>
 
 **5. Docker File Creation:**
    - Time to pack a punch! Wrap up the entire script and ML code into a Docker file—a set of instructions that brings your creation to life in the virtual world.
@@ -120,3 +140,17 @@ model = RandomForestClassifier(n_estimators=200, min_samples_split=100, random_s
 <!-- 🎭 Section 6: The Grand Finale - Conclusion -->
 <h2>🌈 The Grand Finale: Harmony of Predictions</h2>
 <p>Our story concludes with a symphony of decision trees, easy interfaces, containerization, and cloud instances – creating a tool that predicts stock movements in a user-friendly way. This project blends technology and finance, offering a simple yet powerful guide for making informed stock decisions in the dynamic market. 🚀<br>May your stocks rise, and your financial decisions echo the wisdom of our virtual forest of classifiers.</p>
+<table style="width: 100%;">
+  <tr>
+    <td style="width: 50%;">
+      <p><strong>Innovative Machine Learning Infrastructure</strong></p>
+      <p>In essence, the implemented machine learning (ML) code functions as the backbone, intricately handling data and employing advanced ML techniques to predict outputs based on inputs. These predictions are then communicated seamlessly through APIs. The entire system is meticulously encapsulated, along with its dependencies, within a Docker file. Subsequently, this Docker file is executed on an AWS EC2 instance.</p>
+      <p>Notably, the EC2 instance is equipped with a public key, facilitating the visualization of the application across the vast expanse of the internet, all achieved without the necessity of a domain name.</p>
+    </td>
+    <td style="width: 50%;">
+      <!-- Add an image here if needed -->
+      <!-- <img src="your-image-url" alt="Description" width="500" /> -->
+    </td>
+  </tr>
+</table>
+
