@@ -1,0 +1,7 @@
+
+path: /Users/surisettivamsikrishna/Downloads/Vamsi Pc/CODES/Mark2/River Ganges/Dataset
+train: train/images
+val: valid/images
+
+nc: 3  # Number of classes
+names: ['empty','plastic', 'river']  # Class names

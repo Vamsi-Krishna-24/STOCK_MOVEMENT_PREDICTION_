@@ -1,0 +1,2 @@
+ultralytics 
+numpy opencv-python matplotlib
